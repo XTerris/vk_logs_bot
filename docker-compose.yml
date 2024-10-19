@@ -1,0 +1,12 @@
+services:
+  bot:
+    build: ./bot/
+    volumes:
+      - logs:/usr/src/bot/logs
+  logger:
+    build: ./logger/
+    volumes:
+      - logs:/usr/src/bot/logs
+
+volumes:
+  logs:
